@@ -15,6 +15,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.7.5/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
     <title>Monisat GR</title>
 </head>
 
@@ -47,19 +49,21 @@
                 <ul>
                     <li>
                         <div class="icon">
-                            <img src="img/icone-mensalista.svg" alt="">
+                            <i class="fa-solid fa-calendar-days"></i>
                         </div>
                         <span>Plano <br>Mensal</span>
                     </li>
                     <li>
                         <div class="icon">
-                            <img src="img/icone-avulsa.svg" alt="">
+                            <i class="fa-solid fa-calendar-minus"></i>
+
                         </div>
                         <span>Viagem <br>Avulsa</span>
                     </li>
                     <li>
                         <div class="icon">
-                            <img src="img/icone-consulta.svg" alt="">
+                            <i class="fa-solid fa-circle-check"></i>
+
                         </div>
                         <span>Cadastro <br>e Consulta</span>
                     </li>
@@ -68,7 +72,7 @@
 
             <div class="area-image">
                 <div class="image">
-                    <img src="./img/img-hero2.png" alt="">
+                    <img src="./img/img-hero3.png" alt="Monisat Rastreamento de veículos">
                     <img src="./img/d-azul.svg" class="detalhe" alt="">
                 </div>
             </div>
@@ -386,37 +390,97 @@
 
     <section class="s-parceiros">
         <div class="container">
-            <div class="content">
-                <div class="cards">
-                    <img src="./img/autotrac.png" alt="">
+            <article class="c-carousel c-carousel--simple">
+                <div class="c-carousel__slides js-carousel--simple">
+                    <article class="c-carousel__slide">
+                        <div class="cards">
+                            <img src="./img/autotrac.png" alt="">
+                        </div>
+                    </article>
+                    <article class="c-carousel__slide">
+                        <div class="cards">
+                            <img src="./img/swot.png" alt="">
+                        </div>
+                    </article>
+                    <article class="c-carousel__slide">
+                        <div class="cards">
+                            <img src="./img/bradesco.png" alt="">
+                        </div>
+                    </article>
+                    <article class="c-carousel__slide">
+                        <div class="cards">
+                            <img src="./img/omnilink.png" alt="">
+                        </div>
+                    </article>
+                    <article class="c-carousel__slide">
+                        <div class="cards">
+                            <img src="./img/chubb.png" alt="">
+                        </div>
+                    </article>
+                    <article class="c-carousel__slide">
+                        <div class="cards">
+                            <img src="./img/porto-seguro.png" alt="">
+                        </div>
+                    </article>
+                    <article class="c-carousel__slide">
+                        <div class="cards">
+                            <img src="./img/porto-seguro.png" alt="">
+                        </div>
+                    </article>
+                    <article class="c-carousel__slide">
+                        <div class="cards">
+                            <img src="./img/porto-seguro.png" alt="">
+                        </div>
+                    </article>
+                    <article class="c-carousel__slide">
+                        <div class="cards">
+                            <img src="./img/porto-seguro.png" alt="">
+                        </div>
+                    </article>
                 </div>
-                <div class="cards">
-                    <img src="./img/swot.png" alt="">
-                </div>
-                <div class="cards">
-                    <img src="./img/bradesco.png" alt="">
-                </div>
-                <div class="cards">
-                    <img src="./img/omnilink.png" alt="">
-                </div>
-                <div class="cards">
-                    <img src="./img/chubb.png" alt="">
-                </div>
-                <div class="cards">
-                    <img src="./img/porto-seguro.png" alt="">
-                </div>
-                <div class="cards">
-                    <img src="./img/frimesa.png" alt="">
-                </div>
-            </div>
+
+                <div class="js-carousel--simple-dots"></div>
+            </article>
+
         </div>
     </section>
 
+    <footer>
+        <div class="container">
+            <div class="content">
+                <div class="item">
+                    <strong>Monisat Gerenciamento de Risco e Logística</strong>
+                    <ul>
+                        <li>Rua Ponta Grossa - Nº 2583 3º andar - sede própria</li>
+                        <li>Francisco Beltrão - PR CEP 85.601-600</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <strong>Contatos</strong>
+                    <ul>
+                        <li>+55 (46) 3520-8000</li>
+                        <li>contato@monisat.com.br</li>
+                    </ul>
+                </div>
 
+                <div class="item-social">
+                    <strong>Redes Sociais</strong>
+                    <ul>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
 
 
 
     <script src="https://unpkg.com/swiper@6.7.5/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 
     <script>
         var swiper = new Swiper(".slide-depoimentos", {
@@ -427,7 +491,26 @@
                 clickable: true,
             },
         });
+
+
+        var $simpleCarousel = document.querySelector(".js-carousel--simple");
+
+        new Glider($simpleCarousel, {
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            draggable: true,
+            dots: ".js-carousel--simple-dots",
+            arrows: {
+                prev: ".js-carousel--simple-prev",
+                next: ".js-carousel--simple-next",
+            },
+        });
+
     </script>
+
+  
+
+
 
 </body>
 
